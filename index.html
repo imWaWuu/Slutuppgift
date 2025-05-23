@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta name="description" content="Upptäck komforten hos Comfy! Vi erbjuder ett brett utbud av kvalitativa sängar och soffor för alla hem. Hitta din perfekta möbel och sov eller slappna av i stil">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMFY</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+           
+            
+            <h1>COMFY</h1>
+            <h2>Upptäck våra stilrena och bekväma soffor som passar alla hem. Från eleganta hörnsoffor till praktiska bäddsoffor, här hittar du något för varje stil och behov. Ge ditt vardagsrum en lyxig känsla idag!</h2>
+        </header>
+
+        <nav class="navbar">
+            <div class="brand-title">Meny</div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="container">
+                <div class="box">
+                    <div class="inner-box">
+                        <img src="bilder/Comfy1.png" alt="Beige U-soffa Nevada XL med divan vänster" class="image" id="image1-1">
+                        <img src="bilder/comfy2.png" alt="grå U-soffa Nevada XL med divan vänster" class="image" id="image1-2" style="display: none;">
+                    </div>
+                    <div class="text-content">
+                        <p class="title">Beige soffa</p>
+                        <p class="description">U-soffa Nevada XL Divan Vänster
+                            Beige</p>
+                        <p class="price">12 999kr</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="inner-box">
+                        <img src="bilder/comfy3.png" alt="Marinblå soffa med schäslong Armunia" class="image" id="image2-1">
+                        <img src="bilder/comfy4.png" alt="Alternativ vy Marinblå soffa med schäslong Armunia" class="image" id="image2-2" style="display: none;">
+                    </div>
+                    <div class="text-content">
+                        <p class="title">Marin-blå soffa</p>
+                        <p class="description"> Soffa med Schäslong Armunia</p>
+                        <p class="price">12 999kr</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="inner-box">
+                        <img src="bilder/comfy5.png" alt="Beige dubbelsäng Olivia 160x200 med diamantformad sänggavel" class="image" id="image3-1">
+                        <img src="bilder/comfy6.png" alt="Alternativ vy Beige dubbelsäng Olivia 160x200 med diamantformad sänggavel" class="image" id="image3-2" style="display: none;">
+                    </div>
+                    <div class="text-content">
+                        <p class="title">Dubbelsäng</p>
+                        <p class="description">Komplett Sängpaket Olivia 160x200 Diamant Sänggavel Beige</p>
+                        <p class="price">11 000kr</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="inner-box">
+                        <img src="bilder/comfy7.png" alt="Matgrupp Suzon 200 cm med 6 Hermione fåtöljer" class="image" id="image4-1">
+                        <img src="bilder/comfy8.png" alt="Alternativ vy Matgrupp Suzon 200 cm med 6 Hermione fåtöljer" class="image" id="image4-2" style="display: none;">
+                    </div>
+                    <div class="text-content">
+                        <p class="title">Bord & Stolar</p>
+                        <p class="description">Matgrupp Suzon 200 cm med 6 Hermione Fåtölj</p>
+                        <p class="price">6000kr</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 COMFY. Alla rättigheter förbehållna.</p>
+        </footer>
+    </div>
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const innerBoxes = document.querySelectorAll('.inner-box');
+        
+            innerBoxes.forEach(box => {                        //Hämtar alla element med klassen innerbox
+                const images = box.querySelectorAll('.image');//Hämtar alla bilder i den aktuella boxen
+        
+                box.addEventListener('mouseenter', () => {
+                    images[0].style.display = 'none';
+                    images[1].style.display = 'block';  
+                });  //När muspekaren går in i boxen döljs den första bilden och den andra visas
+        
+                box.addEventListener('mouseleave', () => {
+                    images[0].style.display = 'block';
+                    images[1].style.display = 'none';
+                });  //När muspekaren lämnar boxen visas första bilden igen och den andra döljs
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
